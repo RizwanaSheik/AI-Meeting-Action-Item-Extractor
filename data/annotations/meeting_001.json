@@ -1,0 +1,41 @@
+{
+  "meeting_id": "meeting_001",
+  "action_items": [
+    {
+      "task": "Complete the homepage redesign and include the navigation section",
+      "person": "Rizwana",
+      "date": "October 10",
+      "status": "Pending"
+    },
+    {
+      "task": "Finish the database integration and test the connection",
+      "person": "Ahmed",
+      "date": "October 12",
+      "status": "Pending"
+    },
+    {
+      "task": "Prepare the final client presentation",
+      "person": "Rizwana",
+      "date": "October 15",
+      "status": "Pending"
+    },
+    {
+      "task": "Review Rizwana's presentation before the client meeting",
+      "person": "Ahmed",
+      "date": "Before the client meeting",
+      "status": "Pending"
+    },
+    {
+      "task": "Update task status in the project tracker every Friday",
+      "person": "Rizwana",
+      "date": "Every Friday",
+      "status": "Pending"
+    },
+    {
+      "task": "Update task status in the project tracker every Friday",
+      "person": "Ahmed",
+      "date": "Every Friday",
+      "status": "Pending"
+    }
+  ]
+}

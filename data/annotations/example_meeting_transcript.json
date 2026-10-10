@@ -1,0 +1,41 @@
+{
+  "meeting_id": "example_meeting_transcript",
+  "action_items": [
+    {
+      "task": "Prepare the project dashboard and include the progress chart",
+      "person": "Rizwana",
+      "date": "October 14",
+      "status": "Pending"
+    },
+    {
+      "task": "Test the login page and report any issues found",
+      "person": "Ahmed",
+      "date": "October 16",
+      "status": "Pending"
+    },
+    {
+      "task": "Send the meeting notes to the team",
+      "person": "Priya",
+      "date": "Tomorrow",
+      "status": "Pending"
+    },
+    {
+      "task": "Update project status in the tracker every Friday",
+      "person": "Rizwana",
+      "date": "Every Friday",
+      "status": "Pending"
+    },
+    {
+      "task": "Update project status in the tracker every Friday",
+      "person": "Ahmed",
+      "date": "Every Friday",
+      "status": "Pending"
+    },
+    {
+      "task": "Update project status in the tracker every Friday",
+      "person": "Priya",
+      "date": "Every Friday",
+      "status": "Pending"
+    }
+  ]
+}
