@@ -1,339 +1,112 @@
-\# AI Meeting Action-Item Extractor
+# 📋 AI Meeting Action-Item Extractor
 
+An AI-powered web application that converts meeting transcripts into structured action items using Google's Gemini API.
 
+🔗 **Live Demo:** [Try the application](https://ai-meeting-action-item-extractor-zuocqhxtbskckmptn299cx.streamlit.app/)
 
-An AI-powered application that converts meeting transcripts into structured action items using Google's Gemini API. It identifies tasks, responsible people, deadlines, status, confidence scores, and supporting evidence, then validates the results and flags items that require human review.
+💻 **GitHub Repository:** [View Source Code](https://github.com/RizwanaSheik/AI-Meeting-Action-Item-Extractor)
 
+## ✨ Features
 
+- 📄 Upload meeting transcripts in TXT, PDF, and DOCX formats.
+- 🤖 Extract action items using Google Gemini AI.
+- 👤 Identify tasks, owners, deadlines, and status.
+- ✅ Validate action items and flag issues for human review.
+- 📊 Calculate Precision, Recall, and F1 Score using reference annotations.
+- 📥 Download results as CSV and JSON files.
+- 🔎 View supporting evidence and confidence scores.
+- 🖥️ Interactive Streamlit dashboard.
 
-\## Features
+## 🛠️ Technologies Used
 
+Python · Streamlit · Google Gemini API · Pandas · Scikit-learn · pypdf · python-docx
 
+## 📸 Screenshots
 
-\- \*\*Multiple file formats:\*\* Upload TXT, PDF, and DOCX meeting transcripts.
+### 1. Application Dashboard
 
-\- \*\*AI-powered extraction:\*\* Extract action items using the Gemini API.
+![Application Dashboard](screenshots/dashboard.png)
 
-\- \*\*Structured output:\*\* Organize tasks, owners, deadlines, status, confidence scores, and transcript evidence.
+### 2. Extracted Action Items
 
-\- \*\*Validation:\*\* Detect missing owners, missing deadlines, invalid dates, invalid statuses, low-confidence items, and possible duplicate tasks.
+![Extracted Action Items](screenshots/action-items.png)
 
-\- \*\*Human-review queue:\*\* Identify extracted items that need additional review.
+### 3. Evaluation Metrics
 
-\- \*\*Evaluation metrics:\*\* Calculate precision, recall, and F1 score against reference annotations.
+![Evaluation Metrics](screenshots/evaluation.png)
 
-\- \*\*Export results:\*\* Download action items in CSV and JSON formats.
+> Add your actual screenshots to the `screenshots` folder using the filenames shown above.
 
-\- \*\*Streamlit dashboard:\*\* View transcripts, extracted items, validation results, and evaluation metrics.
+## 🚀 Run Locally
 
-\- \*\*Automated tests:\*\* Test preprocessing, extraction, validation, evaluation, and the complete pipeline.
-
-
-
-\## Technology Stack
-
-
-
-\- Python
-
-\- Streamlit
-
-\- Google Gemini API (`google-genai`)
-
-\- Pandas
-
-\- Scikit-learn
-
-\- PyMuPDF-free PDF extraction with `pypdf`
-
-\- `python-docx`
-
-\- `python-dotenv`
-
-
-
-\## Project Structure
-
-
-
-```text
-
-AI-Meeting-Action-Item-Extractor/
-
-â”œâ”€â”€ app.py
-
-â”œâ”€â”€ requirements.txt
-
-â”œâ”€â”€ .env
-
-â”œâ”€â”€ .gitignore
-
-â”œâ”€â”€ src/
-
-â”‚   â”œâ”€â”€ \_\_init\_\_.py
-
-â”‚   â”œâ”€â”€ preprocessing.py
-
-â”‚   â”œâ”€â”€ extraction.py
-
-â”‚   â”œâ”€â”€ validation.py
-
-â”‚   â”œâ”€â”€ pipeline.py
-
-â”‚   â””â”€â”€ evaluation.py
-
-â”œâ”€â”€ data/
-
-â”‚   â”œâ”€â”€ sample\_transcripts/
-
-â”‚   â”‚   â””â”€â”€ meeting\_001.txt
-
-â”‚   â””â”€â”€ annotations/
-
-â”‚       â”œâ”€â”€ meeting\_001.json
-
-â”‚       â””â”€â”€ example\_meeting\_transcript.json
-
-â”œâ”€â”€ outputs/
-
-â”œâ”€â”€ tests/
-
-â”‚   â”œâ”€â”€ \_\_init\_\_.py
-
-â”‚   â”œâ”€â”€ test\_preprocessing.py
-
-â”‚   â”œâ”€â”€ test\_extraction.py
-
-â”‚   â”œâ”€â”€ test\_validation.py
-
-â”‚   â”œâ”€â”€ test\_pipeline.py
-
-â”‚   â””â”€â”€ test\_evaluation.py
-
-â””â”€â”€ screenshots/
-
-```
-
-
-
-\## Installation and Setup
-
-
-
-\### 1. Clone the repository
-
-
+**1. Clone the repository**
 
 ```bash
-
-git clone YOUR\_GITHUB\_REPOSITORY\_URL
-
+git clone https://github.com/RizwanaSheik/AI-Meeting-Action-Item-Extractor.git
 cd AI-Meeting-Action-Item-Extractor
-
 ```
 
-
-
-Replace `YOUR\_GITHUB\_REPOSITORY\_URL` with your actual GitHub repository URL.
-
-
-
-\### 2. Create a virtual environment
-
-
-
-Windows PowerShell:
-
-
+**2. Create and activate a virtual environment**
 
 ```powershell
-
 python -m venv .venv
-
+.venv\Scripts\Activate.ps1
 ```
 
-
-
-Activate it:
-
-
+**3. Install dependencies**
 
 ```powershell
-
-.venv\\Scripts\\Activate.ps1
-
-```
-
-
-
-\### 3. Install dependencies
-
-
-
-```powershell
-
 python -m pip install -r requirements.txt
-
 ```
 
-
-
-\### 4. Configure the Gemini API key
-
-
+**4. Configure your Gemini API key**
 
 Create a `.env` file in the project root:
 
-
-
 ```text
-
-GEMINI\_API\_KEY=YOUR\_GEMINI\_API\_KEY
-
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 ```
 
+Replace the placeholder with your own API key. Never upload your `.env` file to GitHub.
 
-
-Replace the placeholder with your own Gemini API key. Keep the key private and never commit the `.env` file to GitHub.
-
-
-
-\### 5. Start the application
-
-
+**5. Run the application**
 
 ```powershell
-
 python -m streamlit run app.py
-
 ```
 
+## 📊 Evaluation
 
+The application compares extracted action items with reference annotations and calculates:
 
-Open the local URL displayed in the terminal.
+- **Precision:** How many predicted items correctly match the reference.
+- **Recall:** How many reference items were successfully identified.
+- **F1 Score:** A combined measure of precision and recall.
 
+Evaluation requires a matching reference annotation JSON file. Scores depend on the quality of the annotations and the matching method.
 
-
-\## How to Use
-
-
-
-1\. Upload a meeting transcript in TXT, PDF, or DOCX format.
-
-2\. Review the cleaned transcript.
-
-3\. Click \*\*Extract Action Items\*\*.
-
-4\. Review the extracted tasks and validation results.
-
-5\. Inspect items in the human-review queue when needed.
-
-6\. Download the results as CSV or JSON.
-
-7\. View evaluation metrics when a matching reference annotation file exists.
-
-
-
-\## Evaluation
-
-
-
-The evaluation module compares extracted action items against manually prepared reference annotations. It calculates:
-
-
-
-\- \*\*Precision:\*\* The proportion of predicted action items that match reference items.
-
-\- \*\*Recall:\*\* The proportion of reference items successfully matched.
-
-\- \*\*F1 Score:\*\* The harmonic mean of precision and recall.
-
-
-
-Evaluation is available only when a corresponding annotation file exists in `data/annotations/`. Scores depend on annotation quality and the matching threshold. Results on a small sample dataset do not guarantee the same performance on unseen transcripts.
-
-
-
-For an uploaded file named `example\_meeting\_transcript.pdf`, the application looks for:
-
-
-
-```text
-
-data/annotations/example\_meeting\_transcript.json
-
-```
-
-
-
-PDF and DOCX files can share the same annotation file when their transcript content is identical.
-
-
-
-\## Run the Tests
-
-
-
-Run the test modules from the project root:
-
-
+## 🧪 Run Tests
 
 ```powershell
-
-python -m tests.test\_preprocessing
-
-python -m tests.test\_extraction
-
-python -m tests.test\_validation
-
-python -m tests.test\_evaluation
-
-python -m tests.test\_pipeline
-
+python -m tests.test_preprocessing
+python -m tests.test_validation
+python -m tests.test_evaluation
+python -m tests.test_extraction
+python -m tests.test_pipeline
 ```
 
+The extraction and pipeline tests require Gemini API access.
 
+## 🔐 Security
 
-The extraction and pipeline tests call the Gemini API and may require a valid API key and available API quota. Run the other tests according to their implementation and dependencies.
+- Store API keys in `.env` locally or Streamlit Secrets in the cloud.
+- Never commit API keys or confidential transcripts to GitHub.
+- Review AI-generated action items before relying on them.
 
+## 👩‍💻 Author
 
+**Sheik Rizwana Begum**
 
-\## Security
+Computer Science and Engineering (Data Science) Student
 
-
-
-\- Store API credentials in `.env`.
-
-\- Do not upload API keys, passwords, or confidential meeting transcripts to public repositories.
-
-\- Keep `.env` and `.venv/` out of Git version control.
-
-\- Review generated action items before relying on them for important decisions.
-
-
-
-\## Future Improvements
-
-
-
-\- Add OCR support for scanned PDFs.
-
-\- Expand the annotated dataset and evaluate performance on more transcripts.
-
-\- Improve confidence calibration and low-confidence detection.
-
-\- Add human-review editing and approval workflows.
-
-\- Add deployment and monitoring improvements.
-
-
-
-\## Author
-
-
-
-\*\*Sheik Rizwana Begum\*\*
-
-
-
-AI Meeting Action-Item Extractor â€” a project exploring AI-powered information extraction, transcript processing, structured data validation, and evaluation.
+[GitHub Profile](https://github.com/RizwanaSheik)
