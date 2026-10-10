@@ -24,18 +24,16 @@ Python · Streamlit · Google Gemini API · Pandas · Scikit-learn · pypdf · p
 ## 📸 Screenshots
 
 ### 1. Application Dashboard
-
 ![Application Dashboard](screenshots/dashboard.png)
 
 ### 2. Extracted Action Items
-
 ![Extracted Action Items](screenshots/action-items.png)
 
 ### 3. Evaluation Metrics
-
 ![Evaluation Metrics](screenshots/evaluation.png)
 
-> Add your actual screenshots to the `screenshots` folder using the filenames shown above.
+### 4. Human Review Queue
+![Human Review Queue](screenshots/review-queue.png)
 
 ## 🚀 Run Locally
 
